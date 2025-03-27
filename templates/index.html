@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interVU - AI Interview Practice</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-mode">
+    <div class="app-container">
+        <nav class="sidebar">
+            <div class="logo">
+                <h1>interVU</h1>
+            </div>
+            <button id="new-interview" class="new-chat-btn">
+                New Interview
+            </button>
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" placeholder="Search interview history...">
+            </div>
+            <div class="history-container">
+                <!-- Interview history would appear here -->
+            </div>
+        </nav>
+        
+        <main class="content">
+            <div class="theme-toggle">
+                <button id="theme-toggle-btn">
+                    <i class="fas fa-sun light-icon"></i>
+                    <i class="fas fa-moon dark-icon"></i>
+                </button>
+            </div>
+            
+            <div class="welcome-container" id="welcome-screen">
+                <h1>Practice Your Interview Skills</h1>
+                <p class="project-info">A mini project by 6th year Electronic and Telecommunication Engineering students</p>
+                <div class="student-names">
+                    <span>Aditya Gupta</span>
+                    <span>Asadulla Ansari</span>
+                    <span>Priyanshu Sachan</span>
+                    <span>Gautam S</span>
+                </div>
+                
+                <div class="options-container">
+                    <div class="option-card">
+                        <i class="fas fa-microphone"></i>
+                        <span>Practice</span>
+                    </div>
+                    <div class="option-card">
+                        <i class="fas fa-search"></i>
+                        <span>Explore</span>
+                    </div>
+                    <div class="option-card">
+                        <i class="fas fa-code"></i>
+                        <span>Technical</span>
+                    </div>
+                    <div class="option-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Learn</span>
+                    </div>
+                </div>
+                
+                <div class="suggestions">
+                    <p>Popular interview topics:</p>
+                    <div class="suggestion-item">Tell me about yourself</div>
+                    <div class="suggestion-item">What are your strengths and weaknesses?</div>
+                    <div class="suggestion-item">Why do you want this position?</div>
+                    <div class="suggestion-item">How do you handle challenging situations?</div>
+                </div>
+            </div>
+            
+            <div class="interview-container hidden" id="interview-screen">
+                <div class="interview-messages" id="interview-messages">
+                    <!-- Messages will appear here -->
+                </div>
+                
+                <div class="interview-controls">
+                    <button id="start-interview" class="talk-btn">
+                        <i class="fas fa-microphone"></i> Talk to Speak
+                    </button>
+                    <button id="stop-interview" class="stop-btn hidden">
+                        <i class="fas fa-stop"></i> Stop Interview
+                    </button>
+                    <div class="status-indicator">
+                        <span id="status-text">Ready</span>
+                        <div id="status-dot" class="status-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
