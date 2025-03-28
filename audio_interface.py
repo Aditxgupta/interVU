@@ -10,11 +10,11 @@ from google import genai
 from google.genai.types import LiveConnectConfig, Modality, HttpOptions, SpeechConfig, VoiceConfig, PrebuiltVoiceConfig, Content, Part
 
 # API key from environment variable
-API_KEY = "AIzaSyDZ4xgDS0ZhcQTUutPfi0hN4AE-ePw17Zc"
+API_KEY = "API_KEY"
 MODEL_NAME = "gemini-2.0-flash-exp"
 
 # Replicate API token
-REPLICATE_API_TOKEN = "r8_4mrjqKxsndO0yqtYkMhahZdMnbiNfBQ4LnC5q" # get it from replicate's website 
+REPLICATE_API_TOKEN = "API_KEY" # get it from replicate's website 
 
 # Audio configuration
 FORMAT = pyaudio.paInt16
